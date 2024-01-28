@@ -1,0 +1,103 @@
+.EZDrawer .EZDrawer__checkbox {
+    display: none
+}
+
+.EZDrawer .EZDrawer__checkbox:checked~.EZDrawer__overlay {
+    display: block;
+    opacity: 1
+}
+
+.EZDrawer .EZDrawer__checkbox:checked~.EZDrawer__container {
+    visibility: visible;
+    transform: translateZ(0) !important
+}
+
+.EZDrawer .EZDrawer__overlay {
+    display: none;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.EZDrawer .EZDrawer__container {
+    position: fixed;
+    visibility: hidden;
+    background: #fff;
+    transition: all;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, .1)
+}
+
+.FeatureSection_grid__d1X5d {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: minmax(80px, 140px);
+    grid-auto-flow: dense;
+    grid-gap: 1rem
+}
+
+.FeatureSection_grid__item__MVUgX {
+    border-radius: 20px;
+    padding: 1px;
+    position: relative
+}
+
+.FeatureSection_grid__item__1__cTNCJ,
+.FeatureSection_grid__item__4__jH7Ix {
+    grid-row: span 4;
+    grid-column: span 1
+}
+
+.FeatureSection_grid__item__2__WrCaa,
+.FeatureSection_grid__item__5__3zGKn {
+    grid-row: span 3;
+    grid-column: span 2
+}
+
+.FeatureSection_grid__item__3__OqboZ {
+    grid-row: span 1;
+    grid-column: span 1
+}
+
+.FeatureSection_wrapper__sd3_a {
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden
+}
+
+@media screen and (max-width:1320px) {
+    .FeatureSection_grid__item__3__OqboZ {
+        grid-column: span 2
+    }
+    .FeatureSection_grid__item__4__jH7Ix,
+    .FeatureSection_grid__item__5__3zGKn {
+        grid-column: span 3;
+        grid-row: span 3
+    }
+}
+
+@media screen and (max-width:1270px) {
+    .FeatureSection_grid__item__1__cTNCJ {
+        grid-column: span 3;
+        grid-row: span 3
+    }
+    .FeatureSection_grid__item__3__OqboZ {
+        grid-column: span 3
+    }
+    .FeatureSection_grid__item__2__WrCaa {
+        grid-column: span 3;
+        grid-row: span 4
+    }
+    .FeatureSection_grid__item__4__jH7Ix {
+        grid-row: span 3
+    }
+    .FeatureSection_grid__item__5__3zGKn {
+        grid-row: span 4
+    }
+    .FeatureSection_grid__d1X5d {
+        grid-auto-rows: minmax(80px, 100px);
+        grid-template-columns: 1fr;
+        grid-auto-rows: max-content
+    }
+}
